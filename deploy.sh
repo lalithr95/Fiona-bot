@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 cd /app
 
@@ -10,7 +10,7 @@ echo "Host heroku.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 
 echo "Cloning ..."
 git clone $APPNAME_GITHUB_URL
-cd /app/appname
+cd /app/Github-visualization
 echo "Adding Heroku URL"
 git remote add prod $APPNAME_PRODUCTION_URL
 
@@ -19,7 +19,7 @@ git checkout master
 git push prod master
 
 echo "Cleaning"
-rm -rf /app/appname
+rm -rf /app/Github-visualization
 rm -rf /app/.ssh
 
 exit 0

@@ -5,7 +5,6 @@ cd /app
 echo "Setting up SSH"
 mkdir /app/.ssh
 echo "$SSH_PRIVATE_KEY" > .ssh/id_rsa
-echo "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 echo "Host heroku.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 
 echo "Cloning ..."

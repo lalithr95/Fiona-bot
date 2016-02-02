@@ -12,7 +12,7 @@ module.exports = (robot) ->
 			return
 
 		msg.send "Deploying to Heroku"
-		child = exec "./deploy.sh", (err, stdout, stderr) ->
+		child = exec "sh deploy.sh", (err, stdout, stderr) ->
 			msg.send err if err
 			msg.send stderr if stderr
 			msg.send stdout

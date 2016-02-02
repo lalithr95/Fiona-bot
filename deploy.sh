@@ -12,7 +12,7 @@ git clone $APPNAME_GITHUB_URL
 cd /app/Github-visualization
 echo "Adding Heroku URL"
 git remote add prod $APPNAME_PRODUCTION_URL
-
+git config --global url.ssh://git@heroku.com/.insteadOf https://git.heroku.com/
 echo "Pushing to Heroku"
 git checkout master
 git push prod master

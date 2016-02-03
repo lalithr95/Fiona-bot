@@ -12,6 +12,7 @@ module.exports = (robot) ->
 			return
 
 		msg.send "@#{msg.envelope.user} Deploying to Heroku"
+		console.log msg.envelope.user
 		child = exec "sh deploy.sh", (err, stdout, stderr) ->
 			msg.send err if err
 			msg.send stderr if stderr

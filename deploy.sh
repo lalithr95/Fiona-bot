@@ -5,7 +5,7 @@ cd /app
 echo "Setting up SSH"
 mkdir /app/.ssh
 echo "$SSH_PRIVATE_KEY" > .ssh/id_rsa
-echo "Host heroku.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+#echo "Host heroku.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 
 echo "Cloning ..."
 git clone $APPNAME_GITHUB_URL

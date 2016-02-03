@@ -18,6 +18,6 @@ git checkout master
 git push prod master
 
 echo "Cleaning"
-
-
+rm -rf /app/Github-visualization
+rm -rf /app/.ssh
 exit 0

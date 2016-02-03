@@ -5,6 +5,7 @@ cd /app
 echo "Setting up SSH"
 mkdir /app/.ssh
 echo "$SSH_PRIVATE_KEY" > .ssh/id_rsa
+eval `ssh-agent -s`
 ssh-add ~/.ssh/id_rsa
 echo "Host heroku.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 

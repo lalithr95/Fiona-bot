@@ -11,7 +11,7 @@ module.exports = (robot) ->
 			msg.send "#{msg.envelope.user} You don't have Deploy permissions"
 			return
 
-		msg.send "Deploying to Heroku"
+		msg.send "@#{msg.envelope.user} Deploying to Heroku"
 		child = exec "sh deploy.sh", (err, stdout, stderr) ->
 			msg.send err if err
 			msg.send stderr if stderr

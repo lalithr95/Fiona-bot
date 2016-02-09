@@ -6,7 +6,7 @@ exec = require("child_process").exec
 
 module.exports = (robot) ->
 	robot.on 'github_deployment_event', ->
-	robot.respond /deploy/i, (msg) ->
+	robot.respond /deploy2/i, (msg) ->
 
 		unless robot.auth.hasRole(msg.envelope.user, 'deploy')
 			msg.send "#{msg.envelope.user} You don't have Deploy permissions"

@@ -5,7 +5,7 @@ util = require "util"
 exec = require("child_process").exec
 
 module.exports = (robot) ->
-	robot.on 'github_deployment_event'
+	robot.on 'github_deployment_event', ->
 	robot.respond /deploy/i, (msg) ->
 
 		unless robot.auth.hasRole(msg.envelope.user, 'deploy')
